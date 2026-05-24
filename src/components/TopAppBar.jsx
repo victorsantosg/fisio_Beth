@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import bethImg from '../img/beth_img.jpeg';
+import bethImg from '../img/beth_img.png';
 
 export default function TopAppBar() {
   return (
@@ -21,8 +21,7 @@ export default function TopAppBar() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `font-medium transition-colors ${
-              isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
+            `font-medium transition-colors ${isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
             }`
           }
         >
@@ -31,8 +30,7 @@ export default function TopAppBar() {
         <NavLink
           to="/especialidades"
           className={({ isActive }) =>
-            `font-medium transition-colors ${
-              isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
+            `font-medium transition-colors ${isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
             }`
           }
         >
@@ -41,8 +39,7 @@ export default function TopAppBar() {
         <NavLink
           to="/depoimentos"
           className={({ isActive }) =>
-            `font-medium transition-colors ${
-              isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
+            `font-medium transition-colors ${isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
             }`
           }
         >
@@ -51,8 +48,7 @@ export default function TopAppBar() {
         <NavLink
           to="/sobre"
           className={({ isActive }) =>
-            `font-medium transition-colors ${
-              isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
+            `font-medium transition-colors ${isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
             }`
           }
         >
@@ -61,8 +57,7 @@ export default function TopAppBar() {
         <NavLink
           to="/agendar"
           className={({ isActive }) =>
-            `font-medium transition-colors ${
-              isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
+            `font-medium transition-colors ${isActive ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant hover:text-primary'
             }`
           }
         >

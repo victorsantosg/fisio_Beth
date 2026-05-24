@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bethImg2 from '../img/beth_img2.png';
 
 export default function Sobre() {
   return (
@@ -11,7 +12,7 @@ export default function Sobre() {
           <img
             alt="Elizabeth Ferreira Portrait"
             className="relative w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-surface-white ambient-shadow z-10"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5KiLWS1qwm10uYYXwaIruS8dsPWe-3nGxHXcLWO2zXHCQ4lNHAcDopw8Kj6gDLA_SncvzuZP7FCdPJuRmV8Nq2kNThuvZFbqCpjARBTSxT7-8Xv_-gSadQQ9BUQFBqr8bBZJpz7vFFPKH2Rp6NaAUfyVPn6x3VSjIw_15AWTC2WPwNVST8wFYVI0bh13CCdULqal3-Ev5m-_Tx-KPqsEHZzb39k01XeqgbDngco-o0sEWay9tfC9jlRxXv-23qkxyFyyN8md3"
+            src={bethImg2}
           />
         </div>
         <h2 className="text-headline-lg-mobile md:text-headline-lg font-headline font-semibold text-on-surface mb-2">
