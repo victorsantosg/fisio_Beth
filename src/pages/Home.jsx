@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import imgBeth2 from '../img/beth_img2.png';
 
 export default function Home() {
   return (
     <div className="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-stack-lg animate-fade-in">
-      
+
       {/* Hero Section - Split Screen layout on desktop */}
       <section className="mt-6 md:mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[500px]">
         {/* Left Content Column */}
@@ -12,26 +13,26 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-container/20 text-[#634044] rounded-full text-xs font-semibold uppercase tracking-wider">
             ✨ Atendimento Domiciliar Especializado
           </div>
-          
+
           <h1 className="text-headline-lg-mobile md:text-headline-xl font-headline font-bold text-on-background leading-tight">
             Transformando o desenvolvimento motor do seu bebê no conforto do seu lar
           </h1>
-          
+
           <p className="text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
             Fisioterapia Pediátrica de Excelência com acolhimento familiar. Soluções especializadas para Torcicolo Congênito, Assimetrias Cranianas e Atrasos do Desenvolvimento Motor.
           </p>
-          
+
           {/* CTA Group */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
-            <Link 
-              to="/agendar" 
+            <Link
+              to="/agendar"
               className="inline-flex justify-center bg-[#DCAEB2] text-[#2E1317] font-bold text-label-md px-8 py-4 rounded-full hover:bg-[#d49ea3] hover:-translate-y-0.5 transition-all shadow-md items-center gap-2"
             >
               Agendar Consulta Domiciliar
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
-            <Link 
-              to="/especialidades" 
+            <Link
+              to="/especialidades"
               className="inline-flex justify-center bg-surface-white text-primary border border-primary-container/40 font-bold text-label-md px-6 py-4 rounded-full hover:bg-surface-container-low transition-all items-center gap-2"
             >
               Ver Especialidades
@@ -53,14 +54,14 @@ export default function Home() {
 
         {/* Right Image/Graphic Column */}
         <div className="lg:col-span-5 relative w-full aspect-square sm:aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-lg border border-surface-container-highest animate-fade-in-up delay-100">
-          <img 
-            alt="Dra. Elizabeth realizando fisioterapia pediátrica" 
-            className="w-full h-full object-cover" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJGKZz5THwRZLJdZCNb1TMcPQTbk-pVUd7fbHGId35sqISGiVf2d9K4NdQR5L3dzjjox8vU3SmTigxqbK_yF1dWO9yAMXYE3eu_sRxxAzpawmhHQ73qOumkteyp0MIC8YqAB5dVQYI7r4zeEvN66vNVahKgR63AsN4W0sfrQ5u8K5Wp1a_MPfMjA3YyWp6srmBNPAc3bqjb0P_lYqPowS3DOFUw12xVX6ZtqunAcMH8QQBu65yuLQr7hfeuht26E7pfJhU3CyY'"
+          <img
+            alt="Dra. Elizabeth realizando fisioterapia pediátrica"
+            className="w-full h-full object-cover"
+            src={imgBeth2}
           />
           {/* Ambient Overlay to blend text with background */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-          
+
           {/* Floating interactive card inside the image (Micro-animation float) */}
           <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-md border border-white/20 animate-float">
             <div className="flex items-center gap-3">
@@ -105,7 +106,7 @@ export default function Home() {
             <span className="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
           </Link>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 */}
           <div className="bg-surface-white rounded-xl p-6 shadow-sm border border-surface-container-highest hover-premium-card flex flex-col items-start">
@@ -289,8 +290,8 @@ export default function Home() {
         <p className="text-body-md text-primary-fixed-dim max-w-lg mb-4">
           Reserve uma data para a avaliação clínica domiciliar. Atendemos com flexibilidade de horários.
         </p>
-        <Link 
-          to="/agendar" 
+        <Link
+          to="/agendar"
           className="bg-surface-white text-primary font-bold text-label-md py-4 px-8 rounded-full shadow-md hover:bg-surface-container-low hover:-translate-y-0.5 transition-all flex items-center gap-2"
         >
           <span className="material-symbols-outlined text-[20px]">calendar_today</span>
