@@ -103,66 +103,84 @@ export default function Header() {
 
       {/* Mobile Drawer Navigation (Glassmorphism Modal) */}
       <div
-        className={`fixed inset-y-0 right-0 w-4/5 max-w-sm bg-surface-white/95 dark:bg-background/95 backdrop-blur-lg border-l border-surface-container-highest shadow-2xl z-[60] flex flex-col justify-between p-6 transform transition-transform duration-300 ease-out ${
+        className={`fixed inset-y-0 right-0 w-[85%] max-w-sm bg-surface-white/95 dark:bg-background/95 backdrop-blur-xl border-l border-surface-container-highest shadow-2xl z-[60] flex flex-col justify-between p-6 sm:p-8 rounded-l-[2rem] transform transition-transform duration-400 ease-out ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col gap-8 mt-16 relative">
-          <button
-            onClick={closeMenu}
-            className="absolute -top-12 right-0 p-2 text-primary focus:outline-none rounded-lg hover:bg-primary-container/20 transition-colors md:hidden"
-            aria-label="Close Menu"
-          >
-            <span className="material-symbols-outlined text-2xl">close</span>
-          </button>
+        <div className="flex flex-col gap-6 relative">
           
-          <span className="text-xs font-semibold uppercase tracking-widest text-soft-taupe border-b border-surface-container-highest pb-2">
-            Navegação
-          </span>
-          <nav className="flex flex-col gap-5">
+          <div className="flex items-center justify-between mb-4">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-primary/80">
+              Menu Principal
+            </span>
+            <button
+              onClick={closeMenu}
+              className="p-2.5 text-primary focus:outline-none rounded-full bg-primary-container/20 shadow-sm hover:bg-primary hover:text-on-primary transition-all active:scale-95 md:hidden flex items-center justify-center"
+              aria-label="Close Menu"
+            >
+              <span className="material-symbols-outlined text-[20px]">close</span>
+            </button>
+          </div>
+
+          <nav className="flex flex-col gap-2 mt-2">
             <NavLink
               to="/"
               onClick={closeMenu}
               className={({ isActive }) =>
-                `text-headline-md font-semibold font-headline transition-colors ${
-                  isActive ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+                `flex items-center gap-4 p-3.5 rounded-2xl transition-all duration-300 ${
+                  isActive 
+                    ? 'bg-primary-container/40 text-primary font-bold shadow-sm border border-primary-container/50' 
+                    : 'text-on-surface-variant hover:bg-surface-container hover:text-primary font-semibold border border-transparent'
                 }`
               }
             >
-              Início
+              <span className="material-symbols-outlined text-2xl">home</span>
+              <span className="text-body-lg font-headline">Início</span>
             </NavLink>
+
             <NavLink
               to="/especialidades"
               onClick={closeMenu}
               className={({ isActive }) =>
-                `text-headline-md font-semibold font-headline transition-colors ${
-                  isActive ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+                `flex items-center gap-4 p-3.5 rounded-2xl transition-all duration-300 ${
+                  isActive 
+                    ? 'bg-primary-container/40 text-primary font-bold shadow-sm border border-primary-container/50' 
+                    : 'text-on-surface-variant hover:bg-surface-container hover:text-primary font-semibold border border-transparent'
                 }`
               }
             >
-              Especialidades
+              <span className="material-symbols-outlined text-2xl">medical_services</span>
+              <span className="text-body-lg font-headline">Especialidades</span>
             </NavLink>
+
             <NavLink
               to="/depoimentos"
               onClick={closeMenu}
               className={({ isActive }) =>
-                `text-headline-md font-semibold font-headline transition-colors ${
-                  isActive ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+                `flex items-center gap-4 p-3.5 rounded-2xl transition-all duration-300 ${
+                  isActive 
+                    ? 'bg-primary-container/40 text-primary font-bold shadow-sm border border-primary-container/50' 
+                    : 'text-on-surface-variant hover:bg-surface-container hover:text-primary font-semibold border border-transparent'
                 }`
               }
             >
-              Feedbacks
+              <span className="material-symbols-outlined text-2xl">volunteer_activism</span>
+              <span className="text-body-lg font-headline">Feedbacks</span>
             </NavLink>
+
             <NavLink
               to="/sobre"
               onClick={closeMenu}
               className={({ isActive }) =>
-                `text-headline-md font-semibold font-headline transition-colors ${
-                  isActive ? 'text-primary' : 'text-on-surface-variant hover:text-primary'
+                `flex items-center gap-4 p-3.5 rounded-2xl transition-all duration-300 ${
+                  isActive 
+                    ? 'bg-primary-container/40 text-primary font-bold shadow-sm border border-primary-container/50' 
+                    : 'text-on-surface-variant hover:bg-surface-container hover:text-primary font-semibold border border-transparent'
                 }`
               }
             >
-              Sobre Mim
+              <span className="material-symbols-outlined text-2xl">person</span>
+              <span className="text-body-lg font-headline">Sobre Mim</span>
             </NavLink>
           </nav>
         </div>
