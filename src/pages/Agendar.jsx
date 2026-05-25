@@ -46,40 +46,51 @@ export default function Agendar() {
   };
 
   return (
-    <div className="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-stack-md flex flex-col md:flex-row gap-stack-lg items-start animate-[fadeIn_0.5s_ease-out]">
-      {/* Left Side: Context (Visible on md+) */}
-      <div className="hidden md:block w-full md:w-1/2 lg:w-5/12 sticky top-24">
+    <div className="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-12 flex flex-col md:flex-row gap-12 items-start animate-fade-in">
+      
+      {/* Left Side: Context */}
+      <div className="w-full md:w-5/12 sticky top-28 flex flex-col gap-6 animate-fade-in-up">
         <div>
-          <h2 className="text-headline-lg font-headline font-semibold text-primary mb-4">Cuidado Especializado em Casa</h2>
-          <p className="text-body-lg text-on-surface-variant">
-            Transformamos o ambiente familiar em um espaço de desenvolvimento e cura, oferecendo fisioterapia pediátrica de alto padrão no conforto do seu lar.
-          </p>
+          <span className="text-label-md font-semibold text-soft-taupe uppercase tracking-widest text-xs">Agendamento</span>
+          <h2 className="text-headline-lg font-headline font-bold text-primary mt-1">Cuidado Especializado no Seu Lar</h2>
+        </div>
+        <p className="text-body-lg text-on-surface-variant leading-relaxed">
+          Transformamos o ambiente familiar em um espaço seguro de desenvolvimento e estimulação motora, oferecendo fisioterapia pediátrica de alto padrão no conforto do seu lar.
+        </p>
+        <div className="bg-surface-white p-6 rounded-2xl border border-surface-container-highest flex items-start gap-4 shadow-sm">
+          <span className="material-symbols-outlined text-primary text-2xl mt-1">info</span>
+          <div className="flex flex-col gap-1">
+            <h4 className="text-label-md font-bold text-on-surface">Importante</h4>
+            <p className="text-caption text-on-surface-variant leading-relaxed">
+              Após enviar este formulário, você será direcionado para o WhatsApp para confirmarmos juntos o dia e horário mais adequados para a visita.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Right Side: The Form */}
-      <div className="w-full md:w-1/2 lg:w-7/12 max-w-lg mx-auto md:mx-0">
-        <div className="mb-stack-md">
-          <h1 className="text-headline-lg-mobile md:text-headline-lg font-headline font-semibold text-primary mb-2">
-            Agendar Consulta Domiciliar
+      <div className="w-full md:w-7/12 max-w-lg mx-auto md:mx-0 animate-fade-in-up delay-100">
+        <div className="mb-8">
+          <h1 className="text-headline-md font-headline font-bold text-on-surface mb-2">
+            Iniciar Solicitação
           </h1>
           <p className="text-body-md text-on-surface-variant">
-            Preencha os dados abaixo para iniciar o agendamento. Retornaremos via WhatsApp para confirmar os detalhes.
+            Preencha os dados do bebê e do responsável abaixo. Retornaremos o contato em breve.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-stack-sm bg-surface-white p-6 md:p-8 rounded-xl shadow-sm border border-surface-container-highest">
+        <form onSubmit={handleSubmit} className="space-y-6 bg-surface-white p-8 rounded-2xl shadow-sm border border-surface-container-highest">
           {/* Nome do Responsável */}
-          <div className="flex flex-col gap-1">
-            <label className="text-label-md font-semibold text-on-surface-variant uppercase tracking-wide text-xs" htmlFor="nome">
+          <div className="flex flex-col gap-1.5">
+            <label className="text-label-md font-bold text-on-surface-variant uppercase tracking-wider text-[11px]" htmlFor="nome">
               Nome do Responsável
             </label>
             <input
               required
-              className="w-full bg-surface-white border border-[#E8E8E8] rounded-lg px-4 py-3 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none"
+              className="w-full bg-surface-white border border-[#E8E8E8] rounded-xl px-4 py-3.5 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none"
               id="nome"
               name="nome"
-              placeholder="Seu nome completo"
+              placeholder="Digite seu nome completo"
               type="text"
               value={formData.nome}
               onChange={handleChange}
@@ -87,15 +98,15 @@ export default function Agendar() {
           </div>
 
           {/* Idade do Bebê */}
-          <div className="flex flex-col gap-1">
-            <label className="text-label-md font-semibold text-on-surface-variant uppercase tracking-wide text-xs" htmlFor="idade">
+          <div className="flex flex-col gap-1.5">
+            <label className="text-label-md font-bold text-on-surface-variant uppercase tracking-wider text-[11px]" htmlFor="idade">
               Idade do Bebê
             </label>
             <input
-              className="w-full bg-surface-white border border-[#E8E8E8] rounded-lg px-4 py-3 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none"
+              className="w-full bg-surface-white border border-[#E8E8E8] rounded-xl px-4 py-3.5 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none"
               id="idade"
               name="idade"
-              placeholder="Ex: 8 meses"
+              placeholder="Ex: 6 meses"
               type="text"
               value={formData.idade}
               onChange={handleChange}
@@ -103,13 +114,13 @@ export default function Agendar() {
           </div>
 
           {/* Preocupação Clínica (dropdown) */}
-          <div className="flex flex-col gap-1">
-            <label className="text-label-md font-semibold text-on-surface-variant uppercase tracking-wide text-xs" htmlFor="preocupacao">
-              Preocupação Clínica
+          <div className="flex flex-col gap-1.5">
+            <label className="text-label-md font-bold text-on-surface-variant uppercase tracking-wider text-[11px]" htmlFor="preocupacao">
+              Motivo do Atendimento
             </label>
             <div className="relative">
               <select
-                className="w-full bg-surface-white border border-[#E8E8E8] rounded-lg px-4 py-3 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none appearance-none"
+                className="w-full bg-surface-white border border-[#E8E8E8] rounded-xl px-4 py-3.5 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none appearance-none"
                 id="preocupacao"
                 name="preocupacao"
                 value={formData.preocupacao}
@@ -118,8 +129,8 @@ export default function Agendar() {
                 <option value="">Selecione o motivo principal</option>
                 <option value="Torcicolo Congênito">Torcicolo Congênito</option>
                 <option value="Assimetria Craniana">Assimetria Craniana</option>
-                <option value="Atraso Motor">Atraso Motor</option>
-                <option value="Outros">Outros</option>
+                <option value="Atraso Motor">Atraso Motor / Estimulação</option>
+                <option value="Outros">Outros motivos</option>
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-on-surface-variant">
                 <span className="material-symbols-outlined text-sm">expand_more</span>
@@ -128,19 +139,19 @@ export default function Agendar() {
           </div>
 
           {/* Localização */}
-          <div className="flex flex-col gap-1">
-            <label className="text-label-md font-semibold text-on-surface-variant uppercase tracking-wide text-xs" htmlFor="localizacao">
-              Localização (Bairro)
+          <div className="flex flex-col gap-1.5">
+            <label className="text-label-md font-bold text-on-surface-variant uppercase tracking-wider text-[11px]" htmlFor="localizacao">
+              Bairro ou Cidade
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline">
                 <span className="material-symbols-outlined text-lg">location_on</span>
               </div>
               <input
-                className="w-full bg-surface-white border border-[#E8E8E8] rounded-lg pl-10 pr-4 py-3 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none"
+                className="w-full bg-surface-white border border-[#E8E8E8] rounded-xl pl-12 pr-4 py-3.5 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none"
                 id="localizacao"
                 name="localizacao"
-                placeholder="Seu bairro/cidade"
+                placeholder="Ex: Aldeota, Cocó, Meireles..."
                 type="text"
                 value={formData.localizacao}
                 onChange={handleChange}
@@ -149,16 +160,16 @@ export default function Agendar() {
           </div>
 
           {/* Telefone */}
-          <div className="flex flex-col gap-1">
-            <label className="text-label-md font-semibold text-on-surface-variant uppercase tracking-wide text-xs" htmlFor="telefone">
-              Telefone (WhatsApp)
+          <div className="flex flex-col gap-1.5">
+            <label className="text-label-md font-bold text-on-surface-variant uppercase tracking-wider text-[11px]" htmlFor="telefone">
+              Telefone / WhatsApp
             </label>
             <input
               required
-              className="w-full bg-surface-white border border-[#E8E8E8] rounded-lg px-4 py-3 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none"
+              className="w-full bg-surface-white border border-[#E8E8E8] rounded-xl px-4 py-3.5 text-body-md font-body focus:border-primary focus:ring-2 focus:ring-primary-container/30 transition-all outline-none"
               id="telefone"
               name="telefone"
-              placeholder="(00) 00000-0000"
+              placeholder="Ex: (85) 99999-9999"
               type="tel"
               value={formData.telefone}
               onChange={handleChange}
@@ -166,17 +177,17 @@ export default function Agendar() {
           </div>
 
           {/* Submit Area */}
-          <div className="pt-4 flex flex-col gap-3 items-center">
+          <div className="pt-4 flex flex-col gap-4 items-center">
             <button
               type="submit"
-              className="w-full bg-[#DCAEB2] text-[#2E1317] rounded-full py-4 px-6 text-label-md font-semibold flex items-center justify-center gap-2 hover:brightness-95 hover:-translate-y-0.5 transition-all shadow-md"
+              className="w-full bg-[#DCAEB2] text-[#2E1317] rounded-full py-4 px-6 text-label-md font-bold flex items-center justify-center gap-2 hover:bg-[#d49ea3] hover:-translate-y-0.5 active:translate-y-0 transition-all shadow-md"
             >
-              <span>Enviar Solicitação</span>
+              <span>Enviar Solicitação de Visita</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </button>
             <div className="flex items-center gap-2 text-on-surface-variant">
               <span className="material-symbols-outlined text-xs text-gentle-success">mark_chat_unread</span>
-              <span className="text-caption text-secondary">Será direcionado para o WhatsApp</span>
+              <span className="text-caption text-secondary font-medium">Você será direcionado para o WhatsApp</span>
             </div>
           </div>
         </form>

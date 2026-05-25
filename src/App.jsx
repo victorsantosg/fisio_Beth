@@ -1,7 +1,7 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import TopAppBar from './components/TopAppBar';
-import BottomNavBar from './components/BottomNavBar';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Especialidades from './pages/Especialidades';
 import Sobre from './pages/Sobre';
@@ -10,16 +10,13 @@ import Agendar from './pages/Agendar';
 import Confirmacao from './pages/Confirmacao';
 
 function Layout({ children }) {
-  const location = useLocation();
-  const isConfirmacao = location.pathname === '/confirmacao';
-
   return (
     <div className="min-h-screen flex flex-col bg-background text-on-background overflow-x-hidden w-full">
-      <TopAppBar />
-      <div className="flex-grow pt-24 pb-28 md:pb-8 w-full overflow-x-hidden">
+      <Header />
+      <div className="flex-grow pt-20 w-full overflow-x-hidden">
         {children}
       </div>
-      {!isConfirmacao && <BottomNavBar />}
+      <Footer />
     </div>
   );
 }
